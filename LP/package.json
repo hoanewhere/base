@@ -1,0 +1,21 @@
+{
+  "name": "lp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css/sass": "node-sass ./scss/*.scss -o ./dist/css",
+    "css/postcss": "postcss ./dist/css/style.css -o ./dist/css/style.min.css",
+    "clean/css": "rimraf ./dist/css && mkdir -p ./dist/css",
+    "css": "npm run clean/css && npm-run-all -s css/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.3"
+  }
+}
