@@ -9,7 +9,8 @@
     "css:postcss": "postcss ./dist/css/style.css -o ./dist/css/style.min.css",
     "clean:css": "rimraf ./dist/css && mkdir -p ./dist/css",
     "css": "npm run clean:css && npm-run-all -s css:*",
-    "js:uglifyjs": "uglifyjs js/popo.js -o ./dist/js/popo.min.js",
+    "js:build": "browserify js/app.js > dist/js/bundle.js",
+    "js:uglifyjs": "uglifyjs ./dist/js/bundle.js --source-map -o ./dist/js/bundle.min.js",
     "clean:js": "rimraf ./dist/js && mkdir -p ./dist/js",
     "js": "npm run clean:js && npm-run-all -s js:*",
     "images:imagemin": "node imagemin.js",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
+    "browserify": "^16.3.0",
     "cssnano": "^4.1.10",
     "imagemin": "^7.0.0",
     "imagemin-gifsicle": "^6.0.1",
@@ -39,5 +41,8 @@
     "postcss-cli": "^6.1.3",
     "uglify-js": "^3.6.0",
     "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
   }
 }
