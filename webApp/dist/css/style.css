@@ -1,0 +1,17 @@
+body {
+  background-color: red;
+  color: black;
+  position: relative; }
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 100px;
+  background: silver;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+  display: flex; }
+
+
+/*# sourceMappingURL=style.css.map*/
