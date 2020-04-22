@@ -1,1 +1,19 @@
-@import "./base/practice"
+@import "./base/practice";
+
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+
+// FLOCSS
+@import 'foundation/variables';
+@import 'foundation/mixins';
+@import 'foundation/rest';
+@import 'foundation/base';
+
+@import 'layout/*.scss';
+@import 'object/component/*.scss';
+@import 'object/project/**/*.scss';
+@import 'object/utility/*.scss';
